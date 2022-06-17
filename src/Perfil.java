@@ -13,7 +13,6 @@ public class Perfil {
     }
     
     public void loginUser(String userLogin, String passLogin){
-        cont = 0;
 
         this.userLogin = userLogin;
         this.passLogin = passLogin;
@@ -26,23 +25,31 @@ public class Perfil {
 
             for (int i = 0; i < users.size() ; i++) {
 
-                if (userLogin.equals(users.get(i))) {
+                if (userLogin.equals(users.get(i)) && passLogin.equals(passwords.get(i))) {
 
-                    System.out.println("Usuario ingresado: " + userLogin);
-                    System.out.println("Usuario encontrado: " + users.get(i) + ", en la posicion: " + (i+1));
+                    confirmation = true;
+
                     i = users.size()+1;
 
-                }else{
-
-                    cont++;
+                }else if(!userLogin.equals(users.get(i)) || !passLogin.equals(passwords.get(i))){
+                    
+                    confirmation = false;
 
                 }
 
             }
 
-            if (cont == users.size()) {
+            if (confirmation == true) {
+                
+                System.out.println("Inicio de sesión exitoso");
 
-                System.out.println("El usuario ingresado no se encuentra registrado!!");
+                System.out.println();
+
+            }else if(confirmation == false){
+
+                System.out.println("Credenciales incorrectas");
+
+                System.out.println();
 
             }
 
@@ -59,7 +66,9 @@ public class Perfil {
         }else if (users.size() >= 0) {
 
             for (int i = 0; i < users.size(); i++) {
+
                 System.out.println((i+1) + ". " + users.get(i));
+                
             }
 
         }
@@ -74,6 +83,6 @@ public class Perfil {
     String pass = "";
     String userLogin = "";
     String passLogin = "";
-    int cont = 0;
+    boolean confirmation = false;
 
 }
