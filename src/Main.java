@@ -38,18 +38,25 @@ public class Main {
 
             System.out.println("----------Escoja su opción----------");
             option = sc.next();
+            System.out.println();
 
             switch (option) {
-                
+
                 case "1":
                     
-                    System.out.println("----------Ingrese su nombre de usuario----------");
+                    System.out.println("----------Registrarse----------");
+
+                    System.out.println("User: ");
                     user = sc.next();
+
+                    System.out.println();
                 
-                    System.out.println("----------Ingrese su contraseña----------");
+                    System.out.println("Contraseña: ");
                     pass = sc.next();
                     
-                    perfil.registerUser(user,pass);
+                    System.out.println();
+
+                    perfil.verifyRegistration(user,pass);
 
                     System.out.println();
 
@@ -57,13 +64,17 @@ public class Main {
                 
                 case "2":
 
-                    System.out.println("----------Inicio de sesión----------");
+                    System.out.println("----------Iniciar Sesión----------");
 
                     System.out.println("User: ");
                     userLogin = sc.next();
 
-                    System.out.println("Pass: ");
+                    System.out.println();
+
+                    System.out.println("Contraseña: ");
                     passLogin = sc.next();
+
+                    System.out.println();
 
                     perfil.loginUser(userLogin, passLogin);
                     
@@ -71,6 +82,7 @@ public class Main {
 
                 case "3":
 
+                    System.out.println("----------Jugar Como Invitado---------");
                     System.out.println("Opción no integrada de momento...");
 
                     System.out.println();
@@ -79,6 +91,7 @@ public class Main {
 
                 case "4":
 
+                    System.out.println("----------Usuarios Registrados---------");
                     perfil.registeredUsers();
 
                     System.out.println();
@@ -87,6 +100,7 @@ public class Main {
 
                 case "5":
 
+                    System.out.println("----------Ranking---------");
                     System.out.println("Opción no integrada de momento...");
 
                     System.out.println();
@@ -95,11 +109,18 @@ public class Main {
 
                 case "0":
 
+                    System.out.println("----------GRACIAS POR JUGAR BATALLA NAVAL----------");
+                    System.out.println("----------HASTA LA PROXIMA----------");
+
                     salir = true;
 
                     break;
             
                 default:
+                
+                    System.out.println("----------POR FAVOR INGRESE UNA OPCIÓN VALIDA----------");
+
+                    System.out.println();
 
                     break;
 
