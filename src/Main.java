@@ -40,6 +40,7 @@ public class Main {
             option = sc.next();
 
             switch (option) {
+                
                 case "1":
                     
                     System.out.println("----------Ingrese su nombre de usuario----------");
@@ -51,6 +52,7 @@ public class Main {
                     perfil.registerUser(user,pass);
 
                     System.out.println();
+
                     break;
                 
                 case "2":
@@ -66,7 +68,7 @@ public class Main {
                     perfil.loginUser(userLogin, passLogin);
                     
                     break;
-                
+
                 case "3":
 
                     System.out.println("Opción no integrada de momento...");
@@ -92,11 +94,15 @@ public class Main {
                     break;
 
                 case "0":
+
                     salir = true;
+
                     break;
             
                 default:
+
                     break;
+
             }    
         
         }

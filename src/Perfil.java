@@ -75,14 +75,19 @@ public class Perfil {
         
     }
 
-
-
+    //Creación de los ArrayList para usuarios y contraseñas respectivamente
     ArrayList<String> users = new ArrayList<>();
     ArrayList<String> passwords = new ArrayList<>();
+
+    //Variables de usuario y contraseña para el usuario registrado
     String user = "";
     String pass = "";
+
+    //Variables de usuario y contraseña para evaluar el inicio de sesión de un usuario
     String userLogin = "";
     String passLogin = "";
+
+    //Variable para confirmar el inicio de sesión
     boolean confirmation = false;
 
 }
