@@ -3,14 +3,25 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
+
+        //Variables de usuario y contraseña para el registro de un usuario
         String user = "";
         String pass = "";
+
+        //Variables de usuario y contraseña para el inicio de sesión de un usuario
         String userLogin = "";
         String passLogin = "";
+
+        //Variable para el switch
         String option = "";
+
+        //Variable para mantener abierta la app o cerrarla en su defecto
         Boolean salir = false;
+
+        //Creación del perfil
         Perfil perfil = new Perfil();
 
+        //Menú
         while (salir == false) {
             System.out.println("----------BATALLA NAVAL----------");
 
