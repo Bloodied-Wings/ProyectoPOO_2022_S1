@@ -23,7 +23,7 @@ public class Main {
 
         //Menú
         while (salir == false) {
-            System.out.println("----------BATALLA NAVAL----------");
+            System.out.println("----------BATALLA NAVAL!!!----------");
 
             System.out.println();
 
