@@ -97,6 +97,10 @@ public class Perfil {
 
                 System.out.println();
 
+                MenuSesionInicada menu = new MenuSesionInicada();
+
+                menu.menuSesionInicada();
+
             }else if(confirmation == false){ //Caso cuando se niega el inicio de sesión
 
                 System.out.println("Credenciales incorrectas");
